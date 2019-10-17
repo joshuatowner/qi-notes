@@ -1,0 +1,36 @@
+\documentclass{textbook}
+\usepackage{braket}
+
+\begin{document}
+
+\section{Single Qubit Systems}
+
+\subsection{Superposition}
+Quantum mechanics is weird. One of the central components of quantum mechanics is called superposition. The idea is that until an item is observed, it can be in multiple states at the same time. A classical bit has two states, 0 and 1. When dealing with quantum systems, we write states in bra-ket notation, or $\ket{0}$ and $\ket{1}$. I will delve more into this in section \ref{sec:ketbra}, but for now these symbols just represent the qubit being in state zero or state one. The key difference between classical and quantum systems is a qubit state $\ket{\psi}$ can be a linear combination of these two basis states:
+
+\begin{equation}
+  \ket{\psi} = \alpha \ket{0} + \beta \ket{1}
+\end{equation}
+
+This is called superpostion. In quantum-land, the state can be part one real-life state and part another. 
+
+However, when you actually look at the bit in real-life-land, it has to be either zero or one. The chance that the bit is zero or the bit is one is defined by $\alpha$ and $\beta$. For instance, if we define the state $\ket{+}$ to be
+
+\begin{equation}
+    \ket{+} = \frac{1}{\sqrt{2}} \ket{0} + \frac{1}{\sqrt{2}}\ket{1}
+\end{equation}
+
+This state has a 50\% chance of being measured as a 0, and a 50\% chance of being measured as a 1. However, after being measured, the state "collapses" into the state that it presented. For instance, if $\ket{+}$ was measured and found to be 0, then the state of the qubit would then be $\ket{0}$. This is the principal challenge of quantum information, within the quantum system you have much more information than a single bit, you can have any combination of zero and one. But once you measure it you lose almost all of that information. Many quantum algorithms work by doing all of the actual algorithm work in quantum-land and then converting the information to simple zero and one kets so that it can actually be extracted successfully. 
+
+\subsection{Kets and bras}
+\label{sec:ketbra}
+Before we go further, we should talk about the notation used in quantum mechanics. The state $\ket{0}$ is defined as the state in which if you measure a qubit, you get a 0 output 100\% of the time, and $\ket{1}$ is defined similarly. The only possible outcomes of measuring a single qubit is getting a 0 or a 1. From this, quantum mechanics and empirical observations tell us that these two kets form a basis for the state of a qubit. That means that every qubit state is some combination of $\ket{0}$ and $\ket{1}$. This is similar to how every two dimensional vector is some combination of $\vb{i}$ and $\vb{j}$, the basis vectors of $\R^2$. 
+
+\section{Multiple Qubit Systems}
+
+\section{Gates}
+
+\section{Algorithms}
+
+
+\end{document} 
